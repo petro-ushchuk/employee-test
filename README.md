@@ -4,3 +4,4 @@ Implemented a web application with the following functionality:
 - HTTP endpoint to get all employees.
 - HTTP endpoint to get employees with the highest salary per department. The endpoint accept the department as an input parameter. 
 - HTTP endpoint to get all departments where each department contains employees sorted by salary descending.
+Additionaly, created error handler and springfox 3 as view layer. 
