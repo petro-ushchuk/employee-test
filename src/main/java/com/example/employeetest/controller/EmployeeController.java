@@ -1,6 +1,7 @@
 package com.example.employeetest.controller;
 
 
+import com.example.employeetest.dto.DepartmentDto;
 import com.example.employeetest.model.Employee;
 import com.example.employeetest.model.enums.Department;
 import com.example.employeetest.service.EmployeeService;
@@ -56,7 +57,7 @@ public class EmployeeController {
     @ApiResponse(code = 200, message = "OK", response = List.class)
     @GetMapping("/deparments-sorted-by-salary")
     @ResponseStatus(HttpStatus.OK)
-    public List<Employee> getAllEmployeesSortedBySalaryPerDepartment() {
+    public List<DepartmentDto> getAllEmployeesSortedBySalaryPerDepartment() {
         return employeeService.getAllEmployeesSortedBySalaryPerDepartment();
     }
 }
