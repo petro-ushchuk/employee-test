@@ -11,9 +11,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Error {
 
-  private String message;
-  private ErrorCode errorCode;
-  private ErrorType errorType;
-  private LocalDateTime dateTime;
+    private String message;
+    private ErrorCode errorCode;
+    private ErrorType errorType;
+    private LocalDateTime dateTime;
 
 }

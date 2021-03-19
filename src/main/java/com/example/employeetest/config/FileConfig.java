@@ -12,7 +12,7 @@ public class FileConfig {
     private String path;
 
     @Bean(name = "data")
-    public File getDataFile(){
+    public File getDataFile() {
         return new File(path);
     }
 }

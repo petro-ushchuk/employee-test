@@ -14,7 +14,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
+import java.io.File;
+import java.io.Reader;
+import java.io.Writer;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.FileReader;
 import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -68,7 +76,7 @@ public class EmployeeRepository {
         } catch (IOException | CsvValidationException e) {
             throw new BadFileException(e.getCause().getMessage());
         }
-        try(FileReader reader = new FileReader(file)) {
+        try (FileReader reader = new FileReader(file)) {
             List<Employee> parse = new CsvToBeanBuilder<Employee>(reader)
                     .withType(Employee.class)
                     .withSeparator(';')
